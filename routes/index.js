@@ -11,8 +11,6 @@ router.get('/', function(req, res, next) {
 
 router.post('/s3/file', async function(req, res) {
 
-  console.log('hello')
-
   if (!req.files) {
     return res.status(400).send({
       success: false,
