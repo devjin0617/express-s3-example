@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>File Upload Example</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>File Upload</h1>
+    <div>
+      <form action="/s3/file" method="post" enctype="multipart/form-data">
+          <input multiple="multiple"  type="file" name="images" />
+          <button type="submit">업로드</button>
+      </form>
+      
+    </div>
   </body>
 </html>
